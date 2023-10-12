@@ -26,27 +26,39 @@ This readme will be updated with the project slides, video pitch and more servic
 ## Docker
 Do install docker to run this before hand. Alternatively you can navigate to station_reader.py and run it on your preferred IDE as a flask app.
 Flask is also required on top of Python 3.9 or later. To install Flask:
+
 Mac: `python3 -m pip install flask`
+
 Windows: `python -m pip install flask`
 
 If you intend to use Docker instead, you can skip this step.
 You can install Docker at the following URLs:
+
 [Linux](https://docs.docker.com/desktop/install/linux-install/)
+
 [MacOS](https://docs.docker.com/desktop/install/mac-install/) for both x84_64/amd64 and arm64
+
 [Windows](https://docs.docker.com/desktop/install/windows-install/)
 
 ## Local install
 If you have the files installed locally, first navigate to the folder with the Dockerfile. Then, run 
+
 `docker build -t station .`
+
 This builds the container image. Then, run 
 
 `docker run -p 4000:5000 station`
 
 ## Via Dockerhub
 If you want to pull the image via Dockerhub directly, run 
-`docker pull pochienlin/station:1.0`
+
+`docker pull pochienlin/station:1.0` 
+
 to get the image. Then, run 
-`docker run -p 4000:5000 pochienlin/station:1.0` to run the container
+
+`docker run -p 4000:5000 pochienlin/station:1.0` 
+
+to run the container
 
 # Usage
 The endpoint for the Station service is /checkStop and the request body comprises current_code: str, start_code: str, end_code: str.
