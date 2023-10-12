@@ -77,4 +77,4 @@ Here is a sample from the Postman Collection in the repo:
 
 If you get ERROR 415 Unsupported Media, do add Content-Type as application/json in headers. 
 
-It is recommended to use Postman to test this for the best experience. The collection in the repo can be imported to run different test cases.
+It is recommended to use Postman to test this for the best experience. You can download Postman on your preferred device [here](https://www.postman.com/downloads/). The collection in the repo can be imported to run different test cases.
