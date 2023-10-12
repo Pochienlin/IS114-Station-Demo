@@ -35,7 +35,7 @@ def getMessage():
 		data = {"start_code": current_code}
 		return jsonify({"status":406, 
 			"error": "Not Acceptable: Current station code not in path.",
-			"message": f"You have gotten off-track. Please proceed back on track by boarding {next_stop} at line {next_line}",
+			"message": f"You have gotten off-track. Please proceed back on track by boarding {next_stop} at the {next_line} line",
 			"data":data
 			})
 
@@ -56,7 +56,7 @@ def getMessage():
 			if get_off_next and stn==current_code:
 				return jsonify({
 					"status": 200,
-					"message": f"You are currently at {current_code}, please be ready to get off at {s1.code} {s1.name} on the next stop to change to {s2.line}."
+					"message": f"You are currently at {current_code}, please be ready to get off at {s1.code} {s1.name} on the next stop to change to the {s2.line} line."
 					})
 		# print(f"Second to last stop is {path[-2]}")
 		if current_code==path[-2]:
@@ -69,7 +69,7 @@ def getMessage():
 		if(current_code==end_code):
 			return jsonify({
 				"status": 200,
-				"message": "You have reached your destination. Please get off"
+				"message": "You have reached your destination. Please get off at this station and proceed to the gantry to tap out."
 				})
 
 

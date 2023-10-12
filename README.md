@@ -52,11 +52,11 @@ This builds the container image. Then, run
 ## Via Dockerhub
 If you want to pull the image via Dockerhub directly, run 
 
-`docker pull pochienlin/station:1.0` 
+`docker pull pochienlin/station:1.1` 
 
 to get the image. Then, run 
 
-`docker run -p 4000:5000 pochienlin/station:1.0` 
+`docker run -p 4000:5000 pochienlin/station:1.1` 
 
 to run the container
 
