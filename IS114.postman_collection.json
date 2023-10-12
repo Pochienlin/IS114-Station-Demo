@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "5b1e236a-032d-4cc7-9305-feeebbc5d427",
+		"name": "IS114",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Change line",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"current_code\": \"CG 3\",\n    \"start_code\": \"CG 1\",\n    \"end_code\": \"EW 10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:4000/checkStop",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"checkStop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "On path no change",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"current_code\": \"EW 4\",\n    \"start_code\": \"CG 1\",\n    \"end_code\": \"EW 10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:4000/checkStop",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"checkStop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Not on path",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"current_code\": \"EW 2\",\n    \"start_code\": \"CG 1\",\n    \"end_code\": \"EW 10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:4000/checkStop",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"checkStop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reached Destination",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"current_code\": \"EW 10\",\n    \"start_code\": \"CG 1\",\n    \"end_code\": \"EW 10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:4000/checkStop",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"checkStop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Next Stop Destination",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"current_code\": \"EW 9\",\n    \"start_code\": \"CG 1\",\n    \"end_code\": \"EW 10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:4000/checkStop",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"checkStop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get off next stop",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"current_code\": \"CG 2\",\n    \"start_code\": \"CG 1\",\n    \"end_code\": \"EW 10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:4000/checkStop",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"checkStop"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
