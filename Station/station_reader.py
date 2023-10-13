@@ -80,4 +80,4 @@ def getMessage():
 
 if __name__ == '__main__':
 	mrt_map = MetroMap(stations_data)
-	app.run(host='0.0.0.0', debug=True)
+	app.run(host='0.0.0.0', debug=True, port=5002)
