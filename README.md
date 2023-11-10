@@ -78,3 +78,14 @@ Here is a sample from the Postman Collection in the repo:
 If you get ERROR 415 Unsupported Media, do add Content-Type as application/json in headers. 
 
 It is recommended to use Postman to test this for the best experience. You can download Postman on your preferred device [here](https://www.postman.com/downloads/). The collection in the repo can be imported to run different test cases.
+
+
+# SMS Service
+The SMS service runs on Twillio. To run this, you will have to register an account and get your own [API Key](https://www.twilio.com/docs/iam/keys/api-key) to use this function.
+## Adding your key
+Add your API key in .env file, an example is in the repo as well. You can then use `source .env` to export the keys inside. Do ensure that there are no spaces around your assignment operator `=`.
+
+## Register your phone 
+Go into the tables.csv file: This mimicks retrieval from a DB. You can then replace the phone number to yours.
+You can also add new rows to add more devices
+
