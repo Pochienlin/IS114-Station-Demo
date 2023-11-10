@@ -4,6 +4,16 @@ from sgMrt import stations_data
 
 app = Flask(__name__)
 
+@app.route('/getPath/{start_code}/{end_code}', methods=['GET'])
+def getPath(start_code, end_code):
+	map = MetroMap(stations_data)
+	path, changes = map.find_shortest_path(start_code, end_code)
+	return jsonify({
+		"path": path,
+		"changes": changes
+		})
+
+
 @app.route('/checkStop', methods=['POST'])
 def getMessage():
 	current_code, start_code, end_code=None, None, None

@@ -33,12 +33,11 @@ def homeAddr(deviceId):
 def passRoute():
     data = request.get_json()
     end_station = data.get('homeStn')
-    start_station = station
+    start_station = data.startStn
     current_station = station
     deviceId = data.get('deviceId')
     # phone_number = data.get('phoneNo')
 
-    whitelist[deviceId]['startStn'] = start_station
     whitelist[deviceId]['currentStn'] = current_station
 
     # make a call for the shortest path at port 5000
